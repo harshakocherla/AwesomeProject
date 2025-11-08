@@ -1,0 +1,25 @@
+{
+    "name": "react-native-hello-kocherla",
+    "version": "1.0.0",
+    "description": "My Hello Kocherla TurboModule",
+    "main": "src/NativeHelloKocherla.ts",
+    "files": [
+      "src",
+      "android",
+      "ios",
+      "HelloKocherla.podspec"
+    ],
+    "react-native-new-architecture": {
+      "codegenConfig": {
+        "name": "HelloKocherlaSpec",
+        "type": "modules",
+        "jsSrcsDir": "src",
+        "android": {
+          "javaPackageName": "com.hellokocherla"
+        },
+        "ios": {
+          "podspecName": "HelloKocherla"
+        }
+      }
+    }
+  }
