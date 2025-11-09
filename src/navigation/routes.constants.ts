@@ -3,7 +3,9 @@ import { RouteProp } from '@react-navigation/native'
 
 export enum AppRoutes {
     HOME = 'Home',
-    DEALS = 'Deals'
+    DEALS = 'Deals',
+    PRODUCTS = 'Products',
+    PROFILE = 'Profile'
 }
 
 export type DealsRouteParam = {
@@ -13,6 +15,8 @@ export type DealsRouteParam = {
 export type AppRoutesParamList = {
     [AppRoutes.HOME]: undefined
     [AppRoutes.DEALS]: DealsRouteParam
+    [AppRoutes.PRODUCTS]: undefined
+    [AppRoutes.PROFILE]: undefined
 }
 
 export type AppNavigationProp = NativeStackNavigationProp<AppRoutesParamList>
