@@ -18,7 +18,7 @@ export const Home = () => {
     return (
         <View style={styles.container}>
             <Text>
-                { message }
+                { message } - this is from Native module
             </Text>
             <Text>
                 This is Home Screen
