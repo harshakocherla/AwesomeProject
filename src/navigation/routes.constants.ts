@@ -8,6 +8,7 @@ export enum AppRoutes {
 
 export type DealsRouteParam = {
   dealId: string
+  dealName: string
 }
 export type AppRoutesParamList = {
     [AppRoutes.HOME]: undefined

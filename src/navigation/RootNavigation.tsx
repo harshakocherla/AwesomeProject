@@ -9,7 +9,9 @@ export const RootNavigation = () => {
     return (
     <Stack.Navigator initialRouteName={AppRoutes.HOME}>
         <Stack.Screen name={AppRoutes.HOME} component={Home}/>
-        <Stack.Screen name={AppRoutes.DEALS} component={Deals} />
+        <Stack.Screen name={AppRoutes.DEALS} component={Deals} options={({route}) => ( {
+            title: route.params.dealName
+        } )} />
     </Stack.Navigator>
     )
 }

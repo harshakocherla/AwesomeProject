@@ -9,7 +9,8 @@ export const Home = () => {
     const navigation = useNavigation<AppNavigationProp>()
     const [message, setMessage] = useState<string>('loading...')
     const dealsParams: DealsRouteParam = {
-        dealId: '1234'
+        dealId: '1234',
+        dealName: 'Christmas Deal'
     }
     useEffect(() => {
         getMessage().then(setMessage)
