@@ -6,13 +6,13 @@ export enum AppRoutes {
     DEALS = 'Deals'
 }
 
+export type DealsRouteParam = {
+  dealId: string
+}
 export type AppRoutesParamList = {
     [AppRoutes.HOME]: undefined
-    [AppRoutes.DEALS]: undefined
+    [AppRoutes.DEALS]: DealsRouteParam
 }
 
 export type AppNavigationProp = NativeStackNavigationProp<AppRoutesParamList>
-export type AppRouteProp<RouteName extends keyof AppRoutesParamList> = RouteProp<
-  AppRoutesParamList,
-  RouteName
->
+export type AppRouteProp<RouteName extends keyof AppRoutesParamList> = RouteProp<AppRoutesParamList, RouteName>

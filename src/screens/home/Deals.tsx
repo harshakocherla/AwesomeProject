@@ -1,10 +1,15 @@
 import { StyleSheet, Text, View } from "react-native"
+import { AppRouteProp, AppRoutes } from "../../navigation/routes.constants"
 
-export const Deals = () => {
+type DealsProps = {
+    route: AppRouteProp<AppRoutes.DEALS>
+}
+export const Deals = ({ route }: DealsProps) => {
+    const { dealId } = route.params
     return (
         <View style={styles.container}>
             <Text>
-                This is Deals Screen
+                This is Deals: {dealId} Screen
             </Text>
         </View>
     )
