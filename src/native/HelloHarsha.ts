@@ -1,7 +1,7 @@
-import { NativeModules } from 'react-native';
+import { NativeModules } from 'react-native'
 
-const { HelloHarsha } = NativeModules;
+const { HelloHarsha } = NativeModules
 
 export function getMessage(): Promise<string> {
-  return HelloHarsha.getMessage();
+  return HelloHarsha.getMessage()
 }

@@ -1,0 +1,29 @@
+# Dependencies
+node_modules/
+Pods/
+vendor/
+
+# Build outputs
+build/
+dist/
+*.log
+
+# Generated files
+*.generated.*
+coverage/
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# IDE
+.idea/
+.vscode/
+*.swp
+*.swo
+
+# React Native
+android/app/build/
+ios/build/
+*.pbxproj
+
