@@ -1,12 +1,12 @@
 import { useNavigation } from "@react-navigation/native"
 import { Button } from "@react-navigation/elements"
 import { StyleSheet, Text, View } from "react-native"
-import { AppNavigationProp, AppRoutes, DealsRouteParam } from "../../navigation/routes.constants"
+import { HomeStackCompositeNavigationProp, HomeStackRoutes, DealsRouteParam } from "../../navigation/routes.constants"
 import { useEffect, useState } from "react"
 import { getMessage } from "../../native/HelloHarsha"
 
 export const Home = () => {
-    const navigation = useNavigation<AppNavigationProp>()
+    const navigation = useNavigation<HomeStackCompositeNavigationProp>()
     const [message, setMessage] = useState<string>('loading...')
     const dealsParams: DealsRouteParam = {
         dealId: '1234',
@@ -23,7 +23,7 @@ export const Home = () => {
             <Text>
                 This is Home Screen
             </Text>
-            <Button onPress={ () => navigation.navigate(AppRoutes.DEALS, dealsParams) } >View Deals</Button>
+            <Button onPress={ () => navigation.navigate(HomeStackRoutes.DEALS, dealsParams) } >View Deals</Button>
         </View>
     )
 }

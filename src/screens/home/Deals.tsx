@@ -1,13 +1,13 @@
 import { StyleSheet, Text, View } from "react-native"
-import { AppNavigationProp, AppRouteProp, AppRoutes } from "../../navigation/routes.constants"
+import { HomeStackCompositeNavigationProp, HomeStackRouteProp, HomeStackRoutes, TabRoutes } from "../../navigation/routes.constants"
 import { useNavigation } from '@react-navigation/native'
 import { Button } from "@react-navigation/elements"
 
 type DealsProps = {
-    route: AppRouteProp<AppRoutes.DEALS>
+    route: HomeStackRouteProp<HomeStackRoutes.DEALS>
 }
 export const Deals = ({ route }: DealsProps) => {
-    const navigation = useNavigation<AppNavigationProp>()
+    const navigation = useNavigation<HomeStackCompositeNavigationProp>()
     const { dealId } = route.params
     return (
         <View style={styles.container}>
@@ -15,7 +15,7 @@ export const Deals = ({ route }: DealsProps) => {
                 This is Deals: {dealId} Screen
             </Text>
             <Button onPressIn={() => {
-                navigation.navigate(AppRoutes.PRODUCTS)
+                navigation.navigate(TabRoutes.PRODUCTS)
             }}>
                 View all Products
             </Button>
