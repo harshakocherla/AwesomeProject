@@ -8,9 +8,11 @@ import {
 } from '../../navigation/routes.constants'
 import { useEffect, useState } from 'react'
 import { getMessage } from '../../native/HelloHarsha'
+import { useTheme } from '../../context/ThemeContext'
 
 export const Home = () => {
   const navigation = useNavigation<HomeStackCompositeNavigationProp>()
+  const { colors } = useTheme()
   const [message, setMessage] = useState<string>('loading...')
   const dealsParams: DealsRouteParam = {
     dealId: '1234',
@@ -21,7 +23,9 @@ export const Home = () => {
   }, [])
   return (
     <View style={styles.container}>
-      <Text>{message} - this is from Native module</Text>
+      <Text style={{ color: colors.text, backgroundColor: colors.background }}>
+        {message} - this is from Native module
+      </Text>
       <Text>This is Home Screen</Text>
       <Button onPress={() => navigation.navigate(HomeStackRoutes.DEALS, dealsParams)}>
         View Deals
