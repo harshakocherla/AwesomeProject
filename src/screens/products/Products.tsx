@@ -1,9 +1,10 @@
-import { StyleSheet, Text, View } from 'react-native'
+import { StyleSheet, View } from 'react-native'
+import { ProductsList } from '../../components/ProductsList'
 
 export const Products = () => {
   return (
     <View style={styles.container}>
-      <Text>This is Products Screen</Text>
+      <ProductsList />
     </View>
   )
 }
