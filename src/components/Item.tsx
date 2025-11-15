@@ -7,6 +7,7 @@ import {
 } from '../navigation/routes.constants'
 
 export type ItemData = {
+  id: string
   image: string
   description: string
   price: number
@@ -17,12 +18,13 @@ export type ItemProps = {
 }
 
 const ItemComponent = ({ item }: ItemProps) => {
-  const { image, description, price } = item
+  const { id, image, description, price } = item
   const navigation = useNavigation<ProductsStackCompositeNavigationProp>()
   return (
     <Pressable
       onPress={() =>
         navigation.navigate(ProductsStackRoutes.PRODUCT_DISPLAY, {
+          id,
           image,
           description,
           price,
